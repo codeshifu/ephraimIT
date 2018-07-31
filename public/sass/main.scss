@@ -15,13 +15,35 @@ main {
 header {
   .hero {
     height: 500px;
-    background: linear-gradient(
-        to right bottom,
-        rgba(9, 10, 9, 0.686),
-        rgba(23, 43, 36, 0.79)
-      ),
-      url('../imgs/hero.jpg') no-repeat center;
-    background-size: cover;
+
+    .slide1,
+    .slide2 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+    .slide1 {
+      background: linear-gradient(
+          to right bottom,
+          rgba(9, 10, 9, 0.686),
+          rgba(23, 43, 36, 0.79)
+        ),
+        url('../imgs/hero.jpg') no-repeat center;
+      background-size: cover;
+      animation: fade 8s infinite;
+      -webkit-animation: fade 8s infinite;
+    }
+    .slide2 {
+      background: linear-gradient(
+          to right bottom,
+          rgba(9, 10, 9, 0.686),
+          rgba(23, 43, 36, 0.79)
+        ),
+        url('../imgs/hero2.jpg') no-repeat center;
+      background-size: cover;
+      animation: fade2 8s infinite;
+      -webkit-animation: fade2 8s infinite;
+    }
   }
 
   nav {

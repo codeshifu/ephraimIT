@@ -46,6 +46,26 @@ a {
 .text-white {
   color: #d6d6d6; }
 
+@keyframes fade {
+  0% {
+    opacity: 1; }
+  33.333% {
+    opacity: 1; }
+  66.666% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade2 {
+  0% {
+    opacity: 0; }
+  33.333% {
+    opacity: 0; }
+  66.666% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
@@ -57,9 +77,22 @@ main {
   margin: 0 auto; }
 
 header .hero {
-  height: 500px;
-  background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.686), rgba(23, 43, 36, 0.79)), url("../imgs/hero.jpg") no-repeat center;
-  background-size: cover; }
+  height: 500px; }
+  header .hero .slide1,
+  header .hero .slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+  header .hero .slide1 {
+    background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.686), rgba(23, 43, 36, 0.79)), url("../imgs/hero.jpg") no-repeat center;
+    background-size: cover;
+    animation: fade 8s infinite;
+    -webkit-animation: fade 8s infinite; }
+  header .hero .slide2 {
+    background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.686), rgba(23, 43, 36, 0.79)), url("../imgs/hero2.jpg") no-repeat center;
+    background-size: cover;
+    animation: fade2 8s infinite;
+    -webkit-animation: fade2 8s infinite; }
 
 header nav {
   padding: 8px 0; }
