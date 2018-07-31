@@ -4,5 +4,12 @@
   "main": "index.js",
   "repository": "git@github.com:codeshifu/ephraimIT.git",
   "author": "Olushi Luqman Opemipo <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "sass:build": "node-sass public/sass/main.scss public/css/style.css",
+    "sass:watch": "node-sass public/sass/main.scss public/css/style.css -w"
+  },
+  "devDependencies": {
+    "node-sass": "4.9.2"
+  }
 }
