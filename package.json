@@ -1,0 +1,8 @@
+{
+  "name": "ephraimIT",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:codeshifu/ephraimIT.git",
+  "author": "Olushi Luqman Opemipo <olushilukmon03@gmail.com> (https://codeshifu.github.io/)",
+  "license": "MIT"
+}
