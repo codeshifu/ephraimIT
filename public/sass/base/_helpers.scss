@@ -1,0 +1,40 @@
+/* HELPERS */
+.dark {
+  background: $primary-color-dark;
+}
+.container {
+  width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.relative {
+  position: relative;
+  z-index: 90;
+}
+
+.fleft {
+  float: left;
+}
+
+.fright {
+  float: right;
+}
+
+.clearfix::after {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.o-auto {
+  overflow: auto;
+}
+
+.center {
+  text-align: center;
+}
+
+.text-white {
+  color: $ghost-white;
+}
