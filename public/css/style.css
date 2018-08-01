@@ -315,6 +315,8 @@ main section {
     margin-top: -15%; }
     main section.about h3 {
       font-size: 20px; }
+    main section.about img {
+      width: 100%; }
   main section.services {
     background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.79)), url("../imgs/cw22-blockchain-quotebckgrd-3938950.jpg");
     background-size: cover;
@@ -323,22 +325,23 @@ main section {
     main section.services > * {
       transform: skewY(3deg); }
     main section.services .service {
-      background: rgba(255, 255, 255, 0.94);
+      background: white;
       text-align: center;
       border-radius: 3px;
-      font-size: 1.1rem;
       padding: 1.5rem;
-      transition: transform 0.3s;
+      transition: all 0.3s;
       box-shadow: 0 1.5rem 4rem #33333380;
       cursor: pointer; }
       main section.services .service__icon {
         font-size: 3rem;
         margin-bottom: 0.5rem;
+        color: #008726;
         display: inline-block;
         background-image: linear-gradient(to right, #222, #222 url("../imgs/dark.jpg") repeat);
         -webkit-background-clip: text;
         background-clip: text; }
       main section.services .service:hover {
+        font-size: 1rem;
         transform: translateY(-1.5rem) scale(1.03); }
   main section.projects {
     margin-top: -7%;
