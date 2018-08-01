@@ -157,7 +157,7 @@ a {
   max-width: 114rem;
   margin: 0 auto; }
   .row:not(:last-child) {
-    margin-bottom: 8rem; }
+    margin-bottom: 4rem; }
   .row::after {
     content: '';
     display: table;
@@ -165,17 +165,17 @@ a {
   .row [class^='col'] {
     float: left; }
     .row [class^='col']:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 1.5rem; }
   .row .col-1-of-2 {
-    width: calc((100% - 6rem) / 2); }
+    width: calc((100% - 1.5rem) / 2); }
   .row .col-1-of-3 {
-    width: calc((100% - 2 * 6rem) / 3); }
+    width: calc((100% - 2 * 1.5rem) / 3); }
   .row .col-1-of-4 {
-    width: calc((100% - 3 * 6rem) / 4); }
+    width: calc((100% - 3 * 1.5rem) / 4); }
   .row .col-2-of-3 {
-    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+    width: calc( 2 * ((100% - 2 * 1.5rem) / 3) + 1.5rem); }
   .row .col-3-of-4 {
-    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+    width: calc( 3 * ((100% - 3 * 1.5rem) / 4) + 2 * 1.5rem); }
 
 body {
   font-family: 'Roboto', sans-serif;
@@ -186,7 +186,7 @@ body {
   background: #333; }
 
 .wrapper {
-  width: 88%;
+  width: 1254px;
   margin: 0 auto; }
 
 header {
@@ -234,11 +234,38 @@ header {
       letter-spacing: 6px;
       text-transform: capitalize; }
 
-main section.about {
+main section {
   background: #fff;
-  padding: 15rem 10rem;
-  margin-top: -15%; }
-  main section.about h2 {
-    font-size: 36px; }
-  main section.about h3 {
-    font-size: 20px; }
+  padding: 8rem 10rem 8rem; }
+  main section.about {
+    padding-top: 15rem;
+    margin-top: -15%; }
+    main section.about h2 {
+      font-size: 36px; }
+    main section.about h3 {
+      font-size: 20px; }
+  main section.services {
+    background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.79)), url("../imgs/cw22-blockchain-quotebckgrd-3938950.jpg");
+    background-size: cover;
+    transform: skewY(-3deg);
+    margin-top: -3.5rem; }
+    main section.services > * {
+      transform: skewY(3deg); }
+    main section.services .service {
+      background: rgba(255, 255, 255, 0.8);
+      text-align: center;
+      border-radius: 3px;
+      font-size: 1.1rem;
+      padding: 1.5rem;
+      transition: transform 0.3s;
+      box-shadow: 0 1.5rem 4rem #33333380;
+      cursor: pointer; }
+      main section.services .service__icon {
+        font-size: 3rem;
+        margin-bottom: 0.5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, #222, #222 url("../imgs/dark.jpg") repeat);
+        -webkit-background-clip: text;
+        background-clip: text; }
+      main section.services .service:hover {
+        transform: translateY(-1.5rem) scale(1.03); }
