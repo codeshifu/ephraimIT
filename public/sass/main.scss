@@ -7,6 +7,23 @@ body {
   line-height: 1.5em;
   color: $text-color-dark;
   background: $text-color-dark;
+
+  &::-webkit-scrollbar,
+  .projects__wrapper::-webkit-scrollbar {
+    width: 1em;
+  }
+
+  &::-webkit-scrollbar-track,
+  .projects__wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  }
+
+  &::-webkit-scrollbar-thumb,
+  .projects__wrapper::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey;
+  }
 }
 
 .wrapper {
@@ -140,13 +157,14 @@ main {
   section {
     background: $white;
     padding: 8rem 10rem 8rem;
+
+    h2 {
+      font-size: 36px;
+    }
+
     &.about {
       padding-top: 15rem;
       margin-top: -15%;
-
-      h2 {
-        font-size: 36px;
-      }
 
       h3 {
         font-size: 20px;
@@ -162,14 +180,14 @@ main {
         url('../imgs/cw22-blockchain-quotebckgrd-3938950.jpg');
       background-size: cover;
       transform: skewY(-3deg);
-      margin-top: -3.5rem;
+      margin-top: -4%;
 
       & > * {
         transform: skewY(3deg);
       }
 
       .service {
-        background: rgba($white, 0.8);
+        background: rgba($white, 0.94);
         text-align: center;
         border-radius: 3px;
         font-size: 1.1rem;
@@ -192,6 +210,40 @@ main {
         }
         &:hover {
           transform: translateY(-1.5rem) scale(1.03);
+        }
+      }
+    }
+
+    &.projects {
+      margin-top: -7%;
+      padding-top: 16%;
+
+      .projects__wrapper {
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+
+        .project {
+          width: 400px;
+          flex: 0 0 auto;
+          padding: 16px;
+          margin: 0 11px 30px;
+          padding: 16px;
+          float: left;
+          border-right: 1px dotted $primary-color;
+          box-sizing: border-box;
+          img {
+            width: 150px;
+            padding: 2px;
+            object-fit: cover;
+          }
+          .project-for {
+            margin-top: 15px;
+          }
+          .caption p {
+            font-size: 13px;
+          }
         }
       }
     }

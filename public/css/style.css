@@ -212,6 +212,17 @@ body {
   line-height: 1.5em;
   color: #333;
   background: #333; }
+  body::-webkit-scrollbar,
+  body .projects__wrapper::-webkit-scrollbar {
+    width: 1em; }
+  body::-webkit-scrollbar-track,
+  body .projects__wrapper::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); }
+  body::-webkit-scrollbar-thumb,
+  body .projects__wrapper::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    outline: 1px solid slategrey; }
 
 .wrapper {
   width: 1254px;
@@ -294,22 +305,22 @@ header {
 main section {
   background: #fff;
   padding: 8rem 10rem 8rem; }
+  main section h2 {
+    font-size: 36px; }
   main section.about {
     padding-top: 15rem;
     margin-top: -15%; }
-    main section.about h2 {
-      font-size: 36px; }
     main section.about h3 {
       font-size: 20px; }
   main section.services {
     background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.79)), url("../imgs/cw22-blockchain-quotebckgrd-3938950.jpg");
     background-size: cover;
     transform: skewY(-3deg);
-    margin-top: -3.5rem; }
+    margin-top: -4%; }
     main section.services > * {
       transform: skewY(3deg); }
     main section.services .service {
-      background: rgba(255, 255, 255, 0.8);
+      background: rgba(255, 255, 255, 0.94);
       text-align: center;
       border-radius: 3px;
       font-size: 1.1rem;
@@ -326,3 +337,28 @@ main section {
         background-clip: text; }
       main section.services .service:hover {
         transform: translateY(-1.5rem) scale(1.03); }
+  main section.projects {
+    margin-top: -7%;
+    padding-top: 16%; }
+    main section.projects .projects__wrapper {
+      display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; }
+      main section.projects .projects__wrapper .project {
+        width: 400px;
+        flex: 0 0 auto;
+        padding: 16px;
+        margin: 0 11px 30px;
+        padding: 16px;
+        float: left;
+        border-right: 1px dotted #222;
+        box-sizing: border-box; }
+        main section.projects .projects__wrapper .project img {
+          width: 150px;
+          padding: 2px;
+          object-fit: cover; }
+        main section.projects .projects__wrapper .project .project-for {
+          margin-top: 15px; }
+        main section.projects .projects__wrapper .project .caption p {
+          font-size: 13px; }
