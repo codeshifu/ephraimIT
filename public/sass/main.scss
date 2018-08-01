@@ -4,15 +4,19 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: $ghost-white;
+  color: $text-color-dark;
+  background: #eee;
 }
 
-main {
+.wrapper {
   width: 88%;
   margin: 0 auto;
 }
 
 header {
+  color: $ghost-white;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
   .hero {
     height: 500px;
 
@@ -25,7 +29,7 @@ header {
     .slide1 {
       background: linear-gradient(
           to right bottom,
-          rgba(9, 10, 9, 0.686),
+          rgba(9, 10, 9, 0.15),
           rgba(23, 43, 36, 0.79)
         ),
         url('../imgs/hero.jpg') no-repeat center;
@@ -36,8 +40,8 @@ header {
     .slide2 {
       background: linear-gradient(
           to right bottom,
-          rgba(9, 10, 9, 0.686),
-          rgba(23, 43, 36, 0.79)
+          rgba(9, 10, 9, 0.15),
+          rgba(23, 43, 36, 0.85)
         ),
         url('../imgs/hero2.jpg') no-repeat center;
       background-size: cover;
