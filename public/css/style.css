@@ -362,3 +362,16 @@ main section {
           margin-top: 15px; }
         main section.projects .projects__wrapper .project .caption p {
           font-size: 13px; }
+  main section.gallery figure {
+    background: #fff;
+    padding: 5px;
+    cursor: pointer; }
+    main section.gallery figure img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: all 0.2s; }
+    main section.gallery figure:hover img {
+      transform: scale(1.5, 1.4); }
+    main section.gallery figure:hover:not(:hover) img {
+      transform: scale(0.8); }
