@@ -58,8 +58,8 @@ header {
           rgba(9, 10, 9, 0.15),
           rgba(23, 43, 36, 0.85)
         ),
-        url('../imgs/consult.jpg') no-repeat center;
-      background-size: auto;
+        url('../imgs/agile.jpg') no-repeat center;
+      background-size: cover;
       animation: fade3 25s infinite;
       -webkit-animation: fade3 25s infinite;
     }
@@ -79,7 +79,7 @@ header {
       background: rgba($primary-color, 0.6);
       position: absolute;
       left: 50%;
-      top: 60%;
+      top: 50%;
       padding: 10px 20px;
       border-radius: 5px;
       transform: translateX(-50%);

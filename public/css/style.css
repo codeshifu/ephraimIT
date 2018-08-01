@@ -240,8 +240,8 @@ header {
       animation: fade2 25s infinite;
       -webkit-animation: fade2 25s infinite; }
     header .hero .slide3 {
-      background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.85)), url("../imgs/consult.jpg") no-repeat center;
-      background-size: auto;
+      background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.85)), url("../imgs/agile.jpg") no-repeat center;
+      background-size: cover;
       animation: fade3 25s infinite;
       -webkit-animation: fade3 25s infinite; }
     header .hero .slide4 {
@@ -253,7 +253,7 @@ header {
       background: rgba(34, 34, 34, 0.6);
       position: absolute;
       left: 50%;
-      top: 60%;
+      top: 50%;
       padding: 10px 20px;
       border-radius: 5px;
       transform: translateX(-50%);
