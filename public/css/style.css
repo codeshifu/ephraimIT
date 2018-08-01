@@ -1,6 +1,41 @@
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
 * {
   margin: 0;
   padding: 0;
+  border: 0;
   box-sizing: border-box; }
 
 ul {
@@ -17,14 +52,23 @@ a {
 .dark {
   background: #222 url("../imgs/dark.jpg") repeat; }
 
+.shadow {
+  background: #fff url("../imgs/shadow.png") no-repeat center;
+  width: 100%;
+  height: 16px; }
+
 .container {
-  width: 940px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto; }
 
 .relative {
   position: relative;
   z-index: 90; }
+
+.padded {
+  padding-top: 120px;
+  padding-bottom: 120px; }
 
 .fleft {
   float: left; }
@@ -66,56 +110,87 @@ a {
   100% {
     opacity: 0; } }
 
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row [class^='col'] {
+    background: orangered;
+    float: left; }
+    .row [class^='col']:not(:last-child) {
+      margin-right: 6rem; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2); }
+  .row .col-1-of-3 {
+    width: calc((100% - 2 * 6rem) / 3); }
+  .row .col-1-of-4 {
+    width: calc((100% - 3 * 6rem) / 4); }
+  .row .col-2-of-3 {
+    width: calc( 2 * ((100% - 2 * 6rem) / 3) + 6rem); }
+  .row .col-3-of-4 {
+    width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 400;
-  color: #d6d6d6; }
+  color: #333;
+  background: #222 url("../imgs/dark.jpg") repeat; }
 
 main {
   width: 88%;
   margin: 0 auto; }
 
-header .hero {
-  height: 500px; }
-  header .hero .slide1,
-  header .hero .slide2 {
+header {
+  color: #d6d6d6;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
+  header .hero {
+    height: 500px; }
+    header .hero .slide1,
+    header .hero .slide2 {
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    header .hero .slide1 {
+      background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.79)), url("../imgs/hero.jpg") no-repeat center;
+      background-size: cover;
+      animation: fade 8s infinite;
+      -webkit-animation: fade 8s infinite; }
+    header .hero .slide2 {
+      background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.15), rgba(23, 43, 36, 0.85)), url("../imgs/hero2.jpg") no-repeat center;
+      background-size: cover;
+      animation: fade2 8s infinite;
+      -webkit-animation: fade2 8s infinite; }
+  header nav {
+    padding: 8px 0; }
+    header nav .links {
+      margin-top: 2px; }
+      header nav .links .link {
+        font-size: 14px;
+        float: left; }
+      header nav .links .link a {
+        display: inline-block;
+        padding: 8px 15px;
+        color: inherit;
+        position: relative; }
+        header nav .links .link a:hover, header nav .links .link a:focus {
+          border-bottom: 2px solid #d6d6d6; }
+  header .hero-text-box {
     position: absolute;
-    width: 100%;
-    height: 100%; }
-  header .hero .slide1 {
-    background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.686), rgba(23, 43, 36, 0.79)), url("../imgs/hero.jpg") no-repeat center;
-    background-size: cover;
-    animation: fade 8s infinite;
-    -webkit-animation: fade 8s infinite; }
-  header .hero .slide2 {
-    background: linear-gradient(to right bottom, rgba(9, 10, 9, 0.686), rgba(23, 43, 36, 0.79)), url("../imgs/hero2.jpg") no-repeat center;
-    background-size: cover;
-    animation: fade2 8s infinite;
-    -webkit-animation: fade2 8s infinite; }
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%); }
+    header .hero-text-box .hero-text-title {
+      font-size: 40px;
+      letter-spacing: 6px;
+      text-transform: capitalize; }
 
-header nav {
-  padding: 8px 0; }
-  header nav .links {
-    margin-top: 2px; }
-    header nav .links .link {
-      font-size: 14px;
-      float: left; }
-    header nav .links .link a {
-      display: inline-block;
-      padding: 8px 15px;
-      color: inherit;
-      position: relative; }
-      header nav .links .link a:hover, header nav .links .link a:focus {
-        border-bottom: 2px solid #d6d6d6; }
-
-header .hero-text-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  text-align: center;
-  transform: translate(-50%, -50%); }
-  header .hero-text-box .hero-text-title {
-    font-size: 40px;
-    letter-spacing: 6px;
-    text-transform: capitalize; }
+section {
+  background: #fff; }

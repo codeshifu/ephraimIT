@@ -2,8 +2,13 @@
 .dark {
   background: $primary-color-dark;
 }
+.shadow {
+  background: #fff url('../imgs/shadow.png') no-repeat center;
+  width: 100%;
+  height: 16px;
+}
 .container {
-  width: 940px;
+  width: 90%;
   margin-left: auto;
   margin-right: auto;
 }
@@ -12,7 +17,10 @@
   position: relative;
   z-index: 90;
 }
-
+.padded {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
 .fleft {
   float: left;
 }
