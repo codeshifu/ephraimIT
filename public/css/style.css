@@ -397,3 +397,23 @@ main section {
         main section.partners .partners__wrapper .partner img {
           height: 50px;
           object-fit: cover; }
+
+footer {
+  padding: 2rem 12rem 1rem;
+  background: #fff; }
+  footer .copyright {
+    font-weight: 500;
+    text-align: center; }
+    footer .copyright i {
+      font-size: 1.5rem;
+      position: relative;
+      top: 5px; }
+    footer .copyright span:not(:last-child) {
+      padding-right: 15px; }
+  footer .designer {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 14px; }
+    footer .designer i {
+      position: relative;
+      top: 3px; }
