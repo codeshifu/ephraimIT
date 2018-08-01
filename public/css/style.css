@@ -67,8 +67,15 @@ a {
   z-index: 90; }
 
 .padded {
-  padding-top: 120px;
-  padding-bottom: 120px; }
+  padding: 8rem; }
+
+.padded-tb {
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+.padded-lr {
+  padding-left: 8rem;
+  padding-right: 8rem; }
 
 .fleft {
   float: left; }
@@ -89,6 +96,42 @@ a {
 
 .text-white {
   color: #d6d6d6; }
+
+.mt {
+  margin-top: 0.5rem; }
+
+.mt-1 {
+  margin-top: 1rem; }
+
+.mt-2 {
+  margin-top: 2rem; }
+
+.mt-4 {
+  margin-top: 4rem; }
+
+.mt-6 {
+  margin-top: 6rem; }
+
+.mt-8 {
+  margin-top: 8rem; }
+
+.mb {
+  margin-bottom: 0.5rem; }
+
+.mb-1 {
+  margin-bottom: 1rem; }
+
+.mb-2 {
+  margin-bottom: 2rem; }
+
+.mb-4 {
+  margin-bottom: 4rem; }
+
+.mb-6 {
+  margin-bottom: 6rem; }
+
+.mb-8 {
+  margin-bottom: 8rem; }
 
 @keyframes fade {
   0% {
@@ -112,7 +155,6 @@ a {
 
 .row {
   max-width: 114rem;
-  background-color: #eee;
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
@@ -121,7 +163,6 @@ a {
     display: table;
     clear: both; }
   .row [class^='col'] {
-    background: orangered;
     float: left; }
     .row [class^='col']:not(:last-child) {
       margin-right: 6rem; }
@@ -137,11 +178,12 @@ a {
     width: calc( 3 * ((100% - 3 * 6rem) / 4) + 2 * 6rem); }
 
 body {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.5em;
   color: #333;
-  background: #eee; }
+  background: #333; }
 
 .wrapper {
   width: 88%;
@@ -191,3 +233,12 @@ header {
       font-size: 40px;
       letter-spacing: 6px;
       text-transform: capitalize; }
+
+main section.about {
+  background: #fff;
+  padding: 15rem 10rem;
+  margin-top: -15%; }
+  main section.about h2 {
+    font-size: 36px; }
+  main section.about h3 {
+    font-size: 20px; }

@@ -18,9 +18,18 @@
   z-index: 90;
 }
 .padded {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding: 8rem;
 }
+.padded-tb {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+}
+
+.padded-lr {
+  padding-left: 8rem;
+  padding-right: 8rem;
+}
+
 .fleft {
   float: left;
 }
@@ -45,4 +54,46 @@
 
 .text-white {
   color: $ghost-white;
+}
+
+.mt {
+  margin-top: 0.5rem;
+}
+.mt-1 {
+  margin-top: 1rem;
+}
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+.mt-6 {
+  margin-top: 6rem;
+}
+
+.mt-8 {
+  margin-top: 8rem;
+}
+
+.mb {
+  margin-bottom: 0.5rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.mb-2 {
+  margin-bottom: 2rem;
+}
+
+.mb-4 {
+  margin-bottom: 4rem;
+}
+.mb-6 {
+  margin-bottom: 6rem;
+}
+
+.mb-8 {
+  margin-bottom: 8rem;
 }
