@@ -9,18 +9,21 @@ body {
   background: $text-color-dark;
 
   &::-webkit-scrollbar,
-  .projects__wrapper::-webkit-scrollbar {
+  .projects__wrapper::-webkit-scrollbar,
+  .partners__wrapper::-webkit-scrollbar {
     width: 1em;
   }
 
   &::-webkit-scrollbar-track,
-  .projects__wrapper::-webkit-scrollbar-track {
+  .projects__wrapper::-webkit-scrollbar-track,
+  .partners__wrapper::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
     box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
   }
 
   &::-webkit-scrollbar-thumb,
-  .projects__wrapper::-webkit-scrollbar-thumb {
+  .projects__wrapper::-webkit-scrollbar-thumb,
+  .partners__wrapper::-webkit-scrollbar-thumb {
     background-color: darkgrey;
     outline: 1px solid slategrey;
   }
@@ -219,10 +222,7 @@ main {
       padding-top: 16%;
 
       .projects__wrapper {
-        display: flex;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+        @include scrollHorizontal;
 
         .project {
           width: 400px;
@@ -269,6 +269,29 @@ main {
             img {
               transform: scale(0.8);
             }
+          }
+        }
+      }
+    }
+
+    &.partners {
+      padding-top: 50px;
+      padding-bottom: 0;
+      background: #fafafa;
+      border-top: 1px solid #ececec;
+      border-bottom: 1px solid #ececec;
+
+      .partners__wrapper {
+        @include scrollHorizontal;
+
+        .partner {
+          width: 180px;
+          flex: 0 0 auto;
+          text-align: center;
+          margin-bottom: 40px;
+          img {
+            height: 50px;
+            object-fit: cover;
           }
         }
       }
